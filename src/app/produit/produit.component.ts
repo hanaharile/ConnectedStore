@@ -30,15 +30,14 @@ ngOnInit(){
   createForm(){
     this.produitForm = this.fb.group({
         ref: ['', Validators.required],
-          id:'',
         quantite: '',
         prixUnitaire: ''
   });
   }
-  loadProduit(){
+  loadProduits(){
 //subscribe begin listening for async result
-    this.produits=this.produitService.getProduits().subscribe(
-      data => {this.produits=data},
+    this.produitService.getProduits().subscribe(
+      data => {this.produits = data},
       error => {console.log("Une erreur est Survenue.")},
       ()=>{console.log("chargement de Produit est terminee.")}
     );
@@ -48,17 +47,24 @@ addProduit(){
   this.produitService.addProduit(p).subscribe(
     res=>{
       this.initProduit();
-
-      this.loadProduit();
+      this.loadProduits();
     }
   );
 }
 updateProduit(){
-  const p = this.produitForm.value;
   this.produitService.updateProduit(this.selectedProduit).subscribe(
     res=>{
       this.initProduit();
-      this.loadProduit();
+      this.loadProduits();
+    }
+  );
+}
+
+deleteProduit(){
+  this.produitService.deleteProduit(this.selectedProduit.id).subscribe(
+    res=>{
+   this.selectedProduit=new Produit();
+      this.loadProduits();
     }
   );
 }
