@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 // import { Store } from '@ngrx/store';
 //
 // import { PrincipalState } from '../../authentication/shared/principal.state';
 // import { Principal } from '../../authentication/shared/model/principal.model';
+=======
+>>>>>>> crud_produit
 
 @Component({
   selector: 'app-sidebar',
@@ -11,6 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+<<<<<<< HEAD
   // private principal: Principal;
   constructor(
 // private store: Store<PrincipalState>
@@ -46,5 +50,11 @@ export class SidebarComponent implements OnInit {
 
 
 
+=======
+  constructor() { }
+
+  ngOnInit() {
+  }
+>>>>>>> crud_produit
 
 }
