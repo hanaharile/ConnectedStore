@@ -2,10 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
-import {Produit} from '../shared/produit.model';
-import {ProduitService} from './produit.service';
-import { DataModel } from '../shared/data.model';
 
+import {ProduitService} from './shared/service/produit.service';
+import {Produit} from './shared/model/produit.model';
+import { DataModel } from '../shared/data.model';
 
 @Component({
   selector : 'app-produit',

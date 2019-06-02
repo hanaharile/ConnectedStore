@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 
 
-import {AppService} from '../app.service';
+import {AppService} from '../shared/service/app.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,8 +28,7 @@ credentials = {
 //
   login(){
      this.appService.authenticate(this.credentials, ()=>{
-       this.router.navigate(['/home']);
-
+ this.router.navigate(['/home']);
      });
    }
 }

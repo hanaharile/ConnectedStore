@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
 import { Store } from '@ngrx/store';
 //
-import { PrincipalState } from '../shared/principal.state';
-import { Principal } from '../shared/principal.model';
-
+import { PrincipalState } from '../../authentication/shared/principal.state';
+import { Principal } from '../../authentication/shared/model/principal.model';
 
 @Component({
   selector: 'app-sidebar',

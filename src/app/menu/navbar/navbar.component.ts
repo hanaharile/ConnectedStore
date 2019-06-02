@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AppService } from '../app.service';
-
+import { AppService } from '../../authentication/shared/service/app.service';
 
 @Component({
   selector: 'app-navbar',
@@ -30,7 +29,8 @@ export class NavbarComponent implements OnInit {
 
   logout(){
     this.appService.logout(()=>{
-      this.router.navigateByUrl('/login');
+ this.router.navigate(['/login']);
+
     });
   }
 }

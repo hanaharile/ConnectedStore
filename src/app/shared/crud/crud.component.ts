@@ -89,8 +89,8 @@ export class CrudComponent implements OnInit {
 
    }
 
-   // dataChanged($event){
-   //   this.data = this.data.concat($event);
-   // }
+   dataChanged($event){
+    this.data = this.data.concat($event);
+   }
 
 }

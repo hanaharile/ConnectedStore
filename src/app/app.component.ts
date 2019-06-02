@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { AppService } from './app.service';
-
+import { AppService } from './authentication/shared/service/app.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,5 +23,8 @@ export class AppComponent implements OnInit{
        this.router.navigate(['/home']);
      }
  }
+ onShowSideBarChange(showHideSideBar){
+  this.showHideSideBar = showHideSideBar;
+}
 
 }

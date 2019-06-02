@@ -2,21 +2,21 @@
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
       <a class="nav-link"
-      [routerLink]="[{outlets:{contentOutlet : 'dashboard'}}]"
-      *ngIf="hasRoleUser()"
+      routerLink="dashboard"
+      *ngIf="hasRoleAdmin()"
  routerLinkActive="active"
         >Dashboard</a>
     </li>
     <li class="nav-item">
       <a class="nav-link"
-[routerLink]="[{outlets:{contentOutlet : 'produit'}}]"
+routerLink="produit"
 *ngIf="hasRoleUser()"
 routerLinkActive="active"
         >Produits</a>
     </li>
     <li class="nav-item">
       <a class="nav-link"
-[routerLink]="[{outlets:{contentOutlet : 'user'}}]"
+routerLink="user"
 *ngIf="hasRoleAdmin()"
 routerLinkActive="active"
       >Utilisateurs</a>

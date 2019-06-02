@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  showHideSideBar: boolean = false;
+  // showHideSideBar: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-  onShowSideBarChange(showHideSideBar){
-     this.showHideSideBar = showHideSideBar;
- }
+ //  onShowSideBarChange(showHideSideBar){
+ //     this.showHideSideBar = showHideSideBar;
+ // }
 }

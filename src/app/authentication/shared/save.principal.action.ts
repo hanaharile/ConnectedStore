@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-import { Principal } from './principal.model';
+import { Principal } from './model/principal.model';
 
 export const SAVE_PRINCIPAL = 'SAVE_PRINCIPAL';
 
